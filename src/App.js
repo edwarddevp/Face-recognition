@@ -53,7 +53,7 @@ class App extends Component {
     })
   }
 
-  calculateFaceLocation = (data) =>{
+  calculateFaceLocations = (data) =>{
     const image = document.getElementById('inputImage');
     const width = Number(image.width);
     const height = Number(image.height);
@@ -99,7 +99,7 @@ class App extends Component {
         })
         .catch(console.log)
       }
-      this.setState({facesFrames:this.calculateFaceLocation(response)})
+      this.setState({facesFrames:this.calculateFaceLocations(response)})
     })
     .catch(err => console.log(err));
   }
